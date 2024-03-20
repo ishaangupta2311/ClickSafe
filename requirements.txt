@@ -1,0 +1,8 @@
+pip==23.3.1
+flask
+python-whois
+scikit-learn==1.2.2
+python-dateutil
+uvicorn[standard]
+bs4
+requests
