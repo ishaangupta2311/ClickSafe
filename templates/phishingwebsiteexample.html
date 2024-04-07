@@ -1,0 +1,211 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phishing Scams</title>
+    <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/7f89a67ac3.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+    <style>
+        body{
+            background-color: #171717;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+          }
+    </style>
+</head>
+
+<body>
+    <div class="flex h-[80px] items-center justify-between sm:px-4 px-3 py-3">
+        <div class="flex items-center sm:gap-[10px] gap-[5px] cursor-pointer ">
+            <div>
+                <img class="w-[50px] h-[50px]" src="../static/logo-transparent.png" alt="logo image"/>
+            </div>
+            <a href="{{ url_for('index') }}" h1 class="font-bold tracking-[3px] uppercase md:text-3xl sm:text-2xl text-[1.15rem] heading_name " style="color: white;">ClickSafe</h1>
+        </div>
+        <div class="hidden md:block">
+            <div class="flex items-center gap-[10px]">
+                <a href="{{ url_for('about_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">About Us</a>
+                <a href="{{ url_for('contact_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">Contact Us</a>
+                <button class="bg-pink-100 rounded-lg text-pink-500 hover:mt-[-10px] duration-300 py-2 sm:px-4 px-2 font-bold">
+                Get Extension
+                </button>
+            </div>
+            </div>
+        <div class="block md:hidden">
+            <i class="fas fa-bars nav_icon_mark text-[1.5rem]"></i>
+        </div>
+        <div class="mobile_nav hidden flex-col w-[50%] bg-white z-10 pt-[100px] absolute right-0 top-0 h-[90vh] pr-[15px] border-[2px]  items-center gap-[10px]">
+            <i class="fas fa-times cross_mark absolute right-5 top-5 text-[1.5rem]"></i>
+            <a href="{{ url_for('about_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">About Us</a>
+                <a href="{{ url_for('contact_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">Contact Us</a>
+                <button class="bg-pink-100 rounded-lg text-pink-500 hover:mt-[-10px] duration-300 py-2 sm:px-4 px-2 font-bold">
+                Get Extension
+            </button>
+        </div>
+    </div>
+
+
+    <div class="grid grid-cols-1  place-items-center mt-[20px] sm:mt-0  sm:grid-cols-2 items-center px-[30px] " style="color:white">
+
+        <div class="image_one grid place-items-center py-[50px]">
+            <img src="../static/scam_image.jpg" class="rounded-lg sm:w-[80%] w-[95%]" alt="identify images" />
+        </div>
+
+        <div class="heading_part flex flex-col gap-[30px] justify-center items-center">
+            <h1 class="text-[1.25rem] sm:w-[85%] w-[95%]">
+                <span class="text-[1.5rem] tracking-wider font-bold">Unmasking</span> Online Threats: The Definitive
+                List of Phishing Websites
+
+            </h1>
+
+            <h1 class="text-[1.25rem] sm:w-[85%] w-[95%]">
+                Welcome to our comprehensive repository of known phishing websites. Here, we expose the digital
+                deceptions that pose a risk to your online security. Stay informed, stay protected, and help us build a
+                safer online community by identifying and reporting phishing attempts. Explore the depths of online
+                threats and fortify your defenses against cybercriminals. </h1>
+
+            <div class="flex items-start w-[85%]">
+                <button id="navigateButton"
+                    class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:bg-pink-500 hover:text-[#fff]  duration-300">
+                    Check your URL
+                </button>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <div class="px-10 flex mt-[20px] flex-col gap-[20px]" style="color: white;">
+        <div
+            class="url_one relative border-[2px] border-[#ECF3F9] rounded-lg hover:shadow-lg cursor-pointer duration-300 sm:min-w-[250px]  sm:max-w-[80%] ">
+            <p class="absolute top-[10px] font-bold text-white rounded-full left-[-25px] px-5 py-2 bg-pink-500 ">1</p>
+            <div class="m-[30px]">
+                https://spot-clonee.netlify.app/
+            </div>
+        </div>
+
+
+
+        <div
+            class="url_two relative border-[2px] border-[#ECF3F9] rounded-lg hover:shadow-lg cursor-pointer duration-300 sm:min-w-[250px]  sm:max-w-[80%] ">
+            <p class="absolute top-[10px] font-bold text-white rounded-full left-[-25px] px-5 py-2 bg-pink-500 ">2</p>
+            <div class="m-[30px]">
+                https://lotto-india.com/
+            </div>
+        </div>
+
+        <div
+            class="url_three relative border-[2px] border-[#ECF3F9] rounded-lg hover:shadow-lg cursor-pointer duration-300 sm:min-w-[250px]  sm:max-w-[80%] ">
+            <p class="absolute top-[10px] font-bold text-white rounded-full left-[-25px] px-5 py-2 bg-pink-500 ">3</p>
+            <div class="m-[30px]">
+                https://www.paypal-opladen.be/
+            </div>
+        </div>
+
+        <div
+            class="url_four relative border-[2px] border-[#ECF3F9] rounded-lg hover:shadow-lg cursor-pointer duration-300 sm:min-w-[250px]  sm:max-w-[80%] ">
+            <p class="absolute top-[10px] font-bold text-white rounded-full left-[-25px] px-5 py-2 bg-pink-500 ">4</p>
+            <div class="m-[30px]">
+                https://facebook.meta-suite.repl.co/
+            </div>
+        </div>
+    </div>
+
+
+    <div class="h-[100px] bg-black text-white mt-[30px] font-bold flex justify-center items-center">
+        © 2023 Tech Fusion | All rights reserved.
+    </div>
+
+
+    <script>
+        const mobile_nav = document.querySelector('.mobile_nav'); // Select the mobile navigation menu
+    const nav_icon_mark = document.querySelector('.fa-bars'); // Select the navigation icon (fa-bars)
+    const cross_mark = document.querySelector('.cross_mark'); // Select the cross icon (fa-xmark)
+
+    nav_icon_mark.addEventListener('click', () => {
+        mobile_nav.style.display = "flex";
+    });
+
+    cross_mark.addEventListener('click', () => {
+        mobile_nav.style.display = "none";
+        console.log("again_clicked");
+    });
+        document.getElementById("navigateButton").addEventListener("click", function () {
+            window.location.href = "{{ url_for('index') }}";
+        });
+        const image_one = document.querySelector(".image_one");
+        const heading_part = document.querySelector('.heading_part');
+        const url_one = document.querySelector('.url_one');
+        const  url_two = document.querySelector('.url_two');
+        const  url_three = document.querySelector('.url_three');
+        const  url_four = document.querySelector('.url_four');
+        gsap.fromTo(image_one,{
+            opacity:0
+        },{
+            opacity: 1,
+            duration:1.5,
+            ease:'power1.inOut'
+        });
+        gsap.fromTo(heading_part,{
+            opacity:0,
+            y:-100,
+        },{
+            opacity:1,
+            y:0,
+            duration:0.5,
+            ease:'power1.inOut'
+        });
+        gsap.fromTo(url_one,{
+            opacity:0,
+            y:-100,
+        },{
+            opacity:1,
+            y:0,
+            duration:0.5,
+            ease:'power1.inOut'
+        });
+        gsap.fromTo(url_two,{
+            opacity:0,
+            y:-100,
+        },{
+            opacity:1,
+            y:0,
+            duration:0.5,
+            delay:0.2,
+            ease:'power1.inOut'
+        });
+        gsap.fromTo(url_three,{
+            opacity:0,
+            y:-100,
+        },{
+            opacity:1,
+            y:0,
+            duration:0.5,
+            delay:0.4,
+            ease:'power1.inOut'
+        });
+        gsap.fromTo(url_four,{
+            opacity:0,
+            y:-100,
+        },{
+            opacity:1,
+            y:0,
+            duration:0.5,
+            delay:0.6,
+            ease:'power1.inOut'
+        });
+    </script>
+
+</body>
+
+</html>

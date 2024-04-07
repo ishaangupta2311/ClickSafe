@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickSafe</title>
+    <meta name="description" content="Guard against phishing with our cutting-edge tool. We empower users to make smarter choices online by leveraging advanced machine learning. Our model, trained on 10,000+ samples, assesses URLs before you click, instantly flagging potential phishing sites. Explore our site for a list of identified threats, global phishing reports, and a URL checker to keep your online experience secure.">
+    <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/7f89a67ac3.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+    <style>
+        .main {
+            background-repeat: no-repeat;
+            background-position: right 0px top 0px;
+        }
+        .main {
+            background-color: #333;  /* Set background color to dark gray */
+            background-repeat: no-repeat;
+            background-position: right 0px top 0px;
+          }
+          body::-webkit-scrollbar {
+            display: none;
+          }
+          
+          <style>
+            .heading_part {
+              color: [#FFFFFF]
+            }
+            
+          
+          
+              
+          </style>
+          
+    </style>
+</head>
+<body>
+<div class="min-h-[100vh] w-[100vw] overflow-hidden main">
+    <!-- logo div -->
+    <div class="flex h-[80px] items-center justify-between sm:px-4 px-3 py-3">
+        <div class="flex items-center sm:gap-[10px] gap-[5px] cursor-pointer ">
+            <div>
+                <img class="w-[50px] h-[50px]" src="../static/logo-transparent.png" alt="logo image"/>
+            </div>
+            <a href="{{ url_for('index') }}" h1 class="font-bold tracking-[3px] uppercase md:text-3xl sm:text-2xl text-[1.15rem] heading_name text-white">ClickSafe</h1>
+        </div>
+        <div class="hidden md:block">
+            <div class="flex items-center gap-[10px]">
+                <a href="{{ url_for('about_us') }}" class="font-semibold text-[#F3729A] border-[2px] px-3 rounded-lg py-1 border-[#FFFFFF] hover:mt-[-10px] hover:bg-[#7B94C1] hover:text-[#fff]  duration-300">About Us</a>
+                <a href="{{ url_for('contact_us') }}" class="font-semibold text-[#F3729A] border-[2px] px-3 rounded-lg py-1 border-[#FFFFFF] hover:mt-[-10px] hover:bg-[#7B94C1] hover:text-[#fff]  duration-300">Contact Us</a>
+                <button class="bg-[#ECF3F9] rounded-lg text-[#F3729A] hover:mt-[-10px] duration-300 py-2 sm:px-4 px-2 font-bold">
+                    Get Extension
+                </button>
+            </div>
+        </div>
+        <div class="block md:hidden">
+            <i class="fas fa-bars nav_icon_mark text-[1.5rem]"></i>
+        </div>
+        <div class="mobile_nav hidden flex-col w-[50%] bg-white z-10 pt-[100px] absolute right-0 top-0 h-[90vh] pr-[15px] border-[2px]  items-center gap-[10px]">
+            <i class="fas fa-times cross_mark absolute right-5 top-5 text-[1.5rem]"></i>
+            <a href="{{ url_for('about_us') }}" class="font-semibold my-[20px] text-[#2C57A6] border-[2px] px-3 rounded-lg py-1 border-[#7B94C1] hover:mt-[-10px] hover:bg-[#7B94C1] hover:text-[#fff]  duration-300">About Us</a>
+            <a href="{{ url_for('contact_us') }}" class="font-semibold my-[20px] text-[#2C57A6] border-[2px] px-3 rounded-lg py-1 border-[#7B94C1] hover:mt-[-10px] hover:bg-[#7B94C1] hover:text-[#fff]  duration-300">Contact Us</a>
+            <button class="bg-[#ECF3F9] my-[20px] rounded-lg text-[#7B94C1] hover:mt-[-10px] duration-300 py-2 sm:px-4 px-2 font-bold">
+                Get Extension
+            </button>
+        </div>
+    </div>
+    <!-- content part -->
+    <div class="content_part min-h-[calc(50vh-80px)] flex flex-col items-center px-3 justify-center">
+        <p class="heading_part md:text-4xl sm:text-3xl text-2xl font-semibold text-center w-[100%] sm:w-[80%] md:w-[70%] text-white ">
+            Search for information of
+            <span class="text-[#F3729A]">phishing website</span> connected to the
+            public Internet.
+        </p>
+        <!-- input part inside content part -->
+        <form id="urlForm" action="/analyze" method="POST" class="w-[100%] flex my-[30px]">
+            <div class="w-[95%] sm:w-[80%] md:w-[50%] mx-auto relative">
+                <input type="text" name="url" placeholder="Enter The Website URL" class="border-[3px] rounded-[30px] font-semibold text-xl px-4 border-[#F3729A] w-[100%] py-2">
+                <button type="submit" class="fas fa-search fa-magnifying-glass absolute right-[-1px] top-0 text-[#2451A3] text-3xl flex justify-center items-center h-[43px] w-[43px] m-[3px] cursor-pointer focus:bg-[#2451A3] focus:text-[#fff] active:bg-[#2451A3] active:text-[#fff] rounded-[20px]"></button>
+            </div>
+        </form>
+        <!-- Placeholder for displaying the result -->
+        <p id="resultPlaceholder" class="md:text-4xl sm:text-3xl text-2xl font-semibold text-center w-[100%] sm:w-[80%] md:w-[70%]">
+            <!-- Result will go here -->
+        </p>
+    </div>
+
+    <!-- options part -->
+    <div class="grid grid-cols-1 sm:gap-[40px] sm:grid-cols-3 w-[80%] mb-[80px] place-items-center  mx-auto">
+        <a href="{{ url_for('identify_phishing_website') }}" class="option_one duration-300 rounded-lg mb-[20px]">
+            <div class="flex flex-col max-w-[350px] rounded-lg overflow-hidden">
+                <div >
+                    <img src="../assets\Img1.jpg" alt="image_one"/>
+                </div>
+                <div class="bg-black text-white flex items-center justify-center py-1">
+                    <p>
+                        How to Identify
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="{{ url_for('phishing_updates') }}" class="option_two duration-300 rounded-lg mb-[20px]" >
+            <div class="flex flex-col max-w-[350px] rounded-lg overflow-hidden">
+                <div >
+                    <img src="../assets\Img2.jpg" alt="image_one"/>
+                </div>
+                <div class="bg-black text-white flex items-center justify-center py-1">
+                    <p>
+                        Phishing Updates
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="{{ url_for('phishing_website_examples') }}" class="option_three duration-300 rounded-lg mb-[20px]">
+            <div class="flex flex-col max-w-[350px] rounded-lg overflow-hidden">
+                <div >
+                    <img src="../assets/Img3.jpg" alt="image_one"/>
+                </div>
+                <div class="bg-black text-white flex items-center justify-center py-1">
+                    <p>
+                        Phishing Website Examples
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- footer part -->
+    <div class="h-[100px] bg-black text-white font-bold flex justify-center items-center">
+        © 2023 Tech Fusion | All rights reserved.
+    </div>
+</div>
+
+<script>
+    const mobile_nav = document.querySelector('.mobile_nav'); // Select the mobile navigation menu
+    const nav_icon_mark = document.querySelector('.fa-bars'); // Select the navigation icon (fa-bars)
+    const cross_mark = document.querySelector('.cross_mark'); // Select the cross icon (fa-xmark)
+
+    nav_icon_mark.addEventListener('click', () => {
+        mobile_nav.style.display = "flex";
+    });
+
+    cross_mark.addEventListener('click', () => {
+        mobile_nav.style.display = "none";
+        console.log("again_clicked");
+    });
+
+    const heading_part = document.querySelector('.heading_part');
+    const urlForm = document.getElementById('urlForm');
+    const option_one = document.querySelector('.option_one');
+    const option_two = document.querySelector('.option_two');
+    const option_three = document.querySelector('.option_three');
+
+    gsap.fromTo(heading_part, {
+        y: -100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power2.inOut'
+    });
+
+    gsap.fromTo(urlForm, {
+        y: -100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power2.inOut'
+    });
+
+    gsap.fromTo(option_one, {
+        y: 100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1,
+        delay: 1,
+        duration: 0.75,
+        ease: 'power2.inOut'
+    });
+
+    gsap.fromTo(option_two, {
+        y: 100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1,
+        delay: 1.5,
+        duration: 0.75,
+        ease: 'power2.inOut'
+    });
+
+    gsap.fromTo(option_three, {
+        y: 100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1,
+        delay: 2,
+        duration: 0.75,
+        ease: 'power2.inOut'
+    });
+</script>
+</body>
+</html>

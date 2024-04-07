@@ -1,0 +1,208 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phishing Website Example</title>
+    <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/7f89a67ac3.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+    <style>
+        body{
+            background-color: #171717;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+          }
+    </style>
+</head>
+<body>
+<div class="flex h-[80px] items-center justify-between sm:px-4 px-3 py-3">
+        <div class="flex items-center sm:gap-[10px] gap-[5px] cursor-pointer ">
+            <div>
+                <img class="w-[50px] h-[50px]" src="../static/logo-transparent.png" alt="logo image"/>
+            </div>
+            <a href="{{ url_for('index') }}" h1 class="font-bold tracking-[3px] uppercase md:text-3xl sm:text-2xl text-[1.15rem] heading_name" style="color: white;">ClickSafe</h1>
+        </div>
+        <div class="hidden md:block">
+            <div class="flex items-center gap-[10px]">
+                <a href="{{ url_for('about_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">About Us</a>
+                <a href="{{ url_for('contact_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">Contact Us</a>
+                <button class="bg-pink-100 rounded-lg text-pink-500 hover:mt-[-10px] duration-300 py-2 sm:px-4 px-2 font-bold">
+                Get Extension
+                </button>
+            </div>
+            </div>
+        </div>
+        <div class="block md:hidden">
+            <i class="fas fa-bars nav_icon_mark text-[1.5rem]"></i>
+        </div>
+        <div class="mobile_nav hidden flex-col w-[50%] bg-white z-10 pt-[100px] absolute right-0 top-0 h-[90vh] pr-[15px] border-[2px]  items-center gap-[10px]">
+            <i class="fas fa-times cross_mark absolute right-5 top-5 text-[1.5rem]"></i>
+            <a href="{{ url_for('about_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">About Us</a>
+                <a href="{{ url_for('contact_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">Contact Us</a>
+                <button class="bg-pink-100 rounded-lg text-pink-500 hover:mt-[-10px] duration-300 py-2 sm:px-4 px-2 font-bold">
+                Get Extension
+            </button>
+        </div>
+    </div>
+<!--content part -->
+
+<div class="px-10" style="color: white;">
+    <h1 class="heading_part font-bold text-3xl text-white">Phishing Scams News</h1>
+
+    <div class="news_one flex flex-col sm:flex-row gap-[30px] sm:w-[80%] mt-[40px]">
+        <div>
+            <img src="../static/adhar_froud.jpg" class="w-[450px] rounded-lg"/>
+        </div>
+        <div>
+            <h1 class="font-semibold text-[1.5rem]">
+                Aadhaar Fraud: How to prevent misuse of Aadhaar card details, Govt shares tips
+            </h1>
+            <p>Recently, the Unique Identification Authority of India (UIDAI) cautioned users about not clicking on any links of Aadhaar other than the official links shared by them. This is because many times scamsters create a look-alike or phishing website and then gullible people input their key information like Aadhaar and then get scammed.
+            </p>
+
+            <p class="text-[0.85rem] mt-[10px]">
+                4 April , 2024, 12:58 PM
+            </p>
+
+        </div>
+
+    </div>
+
+     <div class="news_two flex flex-col sm:flex-row gap-[30px] sm:w-[80%] mt-[40px]">
+        <div>
+            <img src="../static/crypto_attack.jpg" class="w-[450px] rounded-lg "/>
+        </div>
+        <div>
+            <h1 class="font-semibold text-[1.5rem]">
+                How to save your crypto assets from phishing attacks
+            </h1>
+            <p>
+                Phishing attacks have become a major threat in the realm of digital dangers, including the world of cryptocurrency. These scams exploit human vulnerabilities and use tactics such as urgent requests, artful imitation of legitimate websites, and information traps to trick individuals and investors into revealing their login information or personal data.
+            </p>
+
+            <p class="text-[0.85rem] mt-[10px]">
+                5 April, 2024, 7:58 PM
+            </p>
+
+        </div>
+
+    </div>
+
+     <div class="news_three flex flex-col sm:flex-row gap-[30px] sm:w-[80%] mt-[40px]">
+        <div>
+            <img src="../static/supreme_court_attack.jpg" class="w-[450px] rounded-lg "/>
+        </div>
+        <div>
+            <h1 class="font-semibold text-[1.5rem]">
+CJI warns lawyers, litigants about fake SC website created for phishing attacks</h1>
+            <p>
+As per the notice issued by the Supreme Court, the Registry of the Supreme Court of India has taken due concern of the phishing attack and has flagged the same with law enforcement agencies to investigate and bring the perpetrators to justice.            </p>
+
+            <p class="text-[0.85rem] mt-[10px] mt-[10px]">
+                6 April, 2024, 12:22 AM
+            </p>
+
+        </div>
+
+    </div>
+
+     <div class="news_four flex flex-col sm:flex-row gap-[30px] sm:w-[80%] mt-[40px]">
+        <div>
+            <img src="../static/korea_attack.jpg" class="w-[450px] rounded-lg "/>
+        </div>
+        <div>
+            <h1 class="font-semibold text-[1.5rem]">
+North Korean hackers target US-South Korea military drills, police say.</h1>
+            <p>
+Suspected North Korean hackers have targeted a joint US-South Korea military exercise being held this week though classified information has not been compromised, South Korean police said on Sunday.            </p>
+
+            <p class="text-[0.85rem] mt-[10px]">
+             8 April, 2024, 12:58 PM
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="h-[100px] bg-black text-white mt-[40px] font-bold flex justify-center items-center">
+        © 2023 Tech Fusion | All rights reserved.
+    </div>
+<script>
+    const mobile_nav = document.querySelector('.mobile_nav'); // Select the mobile navigation menu
+    const nav_icon_mark = document.querySelector('.fa-bars'); // Select the navigation icon (fa-bars)
+    const cross_mark = document.querySelector('.cross_mark'); // Select the cross icon (fa-xmark)
+
+    nav_icon_mark.addEventListener('click', () => {
+        mobile_nav.style.display = "flex";
+    });
+
+    cross_mark.addEventListener('click', () => {
+        mobile_nav.style.display = "none";
+        console.log("again_clicked");
+    });
+    const heading_part = document.querySelector('.heading_part');
+    const news_one = document.querySelector('.news_one');
+    const news_two = document.querySelector('.news_two');
+    const news_three = document.querySelector('.news_three');
+    const news_four = document.querySelector('.news_four');
+    gsap.fromTo(heading_part,{
+        opacity:0,
+        x:-100
+    },{
+        opacity:1,
+        x:0,
+        duration:0.5,
+        ease:'power1.inOut',
+    });
+
+    gsap.fromTo(news_one,{
+        opacity:0,
+        x:-150
+    },{
+        opacity:1,
+        x:0,
+        duration:0.5,
+        ease:'power1.inOut',
+        delay:0.15
+    });
+    gsap.fromTo(news_two,{
+        opacity:0,
+        x:-150
+    },{
+        opacity:1,
+        x:0,
+        duration:0.5,
+        ease:'power1.inOut',
+        delay:0.3
+    });
+    gsap.fromTo(news_three,{
+        opacity:0,
+        x:-150
+    },{
+        opacity:1,
+        x:0,
+        duration:0.5,
+        ease:'power1.inOut',
+        delay:0.45
+    });
+    gsap.fromTo(news_four,{
+        opacity:0,
+        x:-150
+    },{
+        opacity:1,
+        x:0,
+        duration:0.5,
+        ease:'power1.inOut',
+        delay:0.6
+    });
+
+</script>
+</body>
+</html>
