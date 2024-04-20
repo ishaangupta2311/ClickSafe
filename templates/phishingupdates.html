@@ -9,6 +9,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/7f89a67ac3.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+    <style>
+        body{
+            background-color: #171717;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+          }
+    </style>
 </head>
 <body>
 <div class="flex h-[80px] items-center justify-between sm:px-4 px-3 py-3">
@@ -16,15 +24,16 @@
             <div>
                 <img class="w-[50px] h-[50px]" src="../static/logo-transparent.png" alt="logo image"/>
             </div>
-            <a href="{{ url_for('index') }}" h1 class="font-bold tracking-[3px] uppercase md:text-3xl sm:text-2xl text-[1.15rem] heading_name ">Not So Phishy</h1>
+            <a href="{{ url_for('index') }}" h1 class="font-bold tracking-[3px] uppercase md:text-3xl sm:text-2xl text-[1.15rem] heading_name" style="color: white;">ClickSafe</h1>
         </div>
         <div class="hidden md:block">
             <div class="flex items-center gap-[10px]">
-                <a href="{{ url_for('about_us') }}" class="font-semibold text-[#2C57A6] border-[2px] px-3 rounded-lg py-1 border-[#7B94C1] hover:mt-[-10px] hover:bg-[#7B94C1] hover:text-[#fff]  duration-300">About Us</a>
-                <a href="{{ url_for('contact_us') }}" class="font-semibold text-[#2C57A6] border-[2px] px-3 rounded-lg py-1 border-[#7B94C1] hover:mt-[-10px] hover:bg-[#7B94C1] hover:text-[#fff]  duration-300">Contact Us</a>
-                <button class="bg-[#ECF3F9] rounded-lg text-[#7B94C1] hover:mt-[-10px] duration-300 py-2 sm:px-4 px-2 font-bold">
-                    Get Extension
+                <a href="{{ url_for('about_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">About Us</a>
+                <a href="{{ url_for('contact_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">Contact Us</a>
+                <button class="bg-pink-100 rounded-lg text-pink-500 hover:mt-[-10px] duration-300 py-2 sm:px-4 px-2 font-bold">
+                Get Extension
                 </button>
+            </div>
             </div>
         </div>
         <div class="block md:hidden">
@@ -32,17 +41,17 @@
         </div>
         <div class="mobile_nav hidden flex-col w-[50%] bg-white z-10 pt-[100px] absolute right-0 top-0 h-[90vh] pr-[15px] border-[2px]  items-center gap-[10px]">
             <i class="fas fa-times cross_mark absolute right-5 top-5 text-[1.5rem]"></i>
-            <a href="{{ url_for('about_us') }}" class="font-semibold my-[20px] text-[#2C57A6] border-[2px] px-3 rounded-lg py-1 border-[#7B94C1] hover:mt-[-10px] hover:bg-[#7B94C1] hover:text-[#fff]  duration-300">About Us</a>
-            <a href="{{ url_for('contact_us') }}" class="font-semibold my-[20px] text-[#2C57A6] border-[2px] px-3 rounded-lg py-1 border-[#7B94C1] hover:mt-[-10px] hover:bg-[#7B94C1] hover:text-[#fff]  duration-300">Contact Us</a>
-            <button class="bg-[#ECF3F9] my-[20px] rounded-lg text-[#7B94C1] hover:mt-[-10px] duration-300 py-2 sm:px-4 px-2 font-bold">
+            <a href="{{ url_for('about_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">About Us</a>
+                <a href="{{ url_for('contact_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">Contact Us</a>
+                <button class="bg-pink-100 rounded-lg text-pink-500 hover:mt-[-10px] duration-300 py-2 sm:px-4 px-2 font-bold">
                 Get Extension
             </button>
         </div>
     </div>
 <!--content part -->
 
-<div class="px-10">
-    <h1 class="heading_part font-bold text-3xl text-[#1D3557]">Phishing Scams News</h1>
+<div class="px-10" style="color: white;">
+    <h1 class="heading_part font-bold text-3xl text-white">Phishing Scams News</h1>
 
     <div class="news_one flex flex-col sm:flex-row gap-[30px] sm:w-[80%] mt-[40px]">
         <div>
@@ -56,7 +65,7 @@
             </p>
 
             <p class="text-[0.85rem] mt-[10px]">
-                11 sept , 2023, 12:58 PM
+                4 April , 2024, 12:58 PM
             </p>
 
         </div>
@@ -76,7 +85,7 @@
             </p>
 
             <p class="text-[0.85rem] mt-[10px]">
-                11 sept , 2023, 12:58 PM
+                5 April, 2024, 7:58 PM
             </p>
 
         </div>
@@ -94,7 +103,7 @@ CJI warns lawyers, litigants about fake SC website created for phishing attacks<
 As per the notice issued by the Supreme Court, the Registry of the Supreme Court of India has taken due concern of the phishing attack and has flagged the same with law enforcement agencies to investigate and bring the perpetrators to justice.            </p>
 
             <p class="text-[0.85rem] mt-[10px] mt-[10px]">
-                11 sept , 2023, 12:58 PM
+                6 April, 2024, 12:22 AM
             </p>
 
         </div>
@@ -112,7 +121,7 @@ North Korean hackers target US-South Korea military drills, police say.</h1>
 Suspected North Korean hackers have targeted a joint US-South Korea military exercise being held this week though classified information has not been compromised, South Korean police said on Sunday.            </p>
 
             <p class="text-[0.85rem] mt-[10px]">
-                11 sept , 2023, 12:58 PM
+             8 April, 2024, 12:58 PM
             </p>
 
         </div>

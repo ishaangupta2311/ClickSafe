@@ -10,21 +10,67 @@
     <script src="https://kit.fontawesome.com/7f89a67ac3.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
+    <style>
+        body::-webkit-scrollbar {
+            display: none;
+          }
+    </style>
 
 </head>
 <body>
+    <html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Identify Phishing Website</title>
+  <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/7f89a67ac3.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
+
+</head>
+<body class="bg-[#171717] text-white">
+
+  </div>
+
+
+  <div class="flex flex-col gap-[30px] justify-center items-center main_part_one">
+    </div>
+
+
+    </div>
+
+</div>
+
+
+<div class="px-[30px] grid grid-cols-1 sm:grid-cols-3 gap-[30px]">
+
+
+  <div class="relative border-[2px] border-[#ECF3F9] rounded-lg hover:shadow-lg cursor-pointer hover:scale-105 duration-300 ">
+    </div>
+  </div>
+
+
+
+
+</body>
+</html>
+
 <div class="flex h-[80px] items-center justify-between sm:px-4 px-3 py-3">
         <div class="flex items-center sm:gap-[10px] gap-[5px] cursor-pointer ">
             <div>
                 <img class="w-[50px] h-[50px]" src="../static/logo-transparent.png" alt="logo image"/>
             </div>
-            <a href="{{ url_for('index') }}" h1 class="font-bold tracking-[3px] uppercase md:text-3xl sm:text-2xl text-[1.15rem] heading_name ">Not So Phishy</h1>
+            <a href="{{ url_for('index') }}" h1 class="font-bold tracking-[3px] uppercase md:text-3xl sm:text-2xl text-[1.15rem] heading_name ">ClickSafe</h1>
         </div>
         <div class="hidden md:block">
             <div class="flex items-center gap-[10px]">
-                <a href="{{ url_for('about_us') }}" class="font-semibold text-[#2C57A6] border-[2px] px-3 rounded-lg py-1 border-[#7B94C1] hover:mt-[-10px] hover:bg-[#7B94C1] hover:text-[#fff]  duration-300">About Us</a>
-                <a href="{{ url_for('contact_us') }}" class="font-semibold text-[#2C57A6] border-[2px] px-3 rounded-lg py-1 border-[#7B94C1] hover:mt-[-10px] hover:bg-[#7B94C1] hover:text-[#fff]  duration-300">Contact Us</a>
-                <button class="bg-[#ECF3F9] rounded-lg text-[#7B94C1] hover:mt-[-10px] duration-300 py-2 sm:px-4 px-2 font-bold">
+                <a href="{{ url_for('about_us') }}" class="font-semibold text-[#F3729A] border-[2px] px-3 rounded-lg py-1 border-[#FFFFFF] hover:mt-[-10px] hover:bg-[#7B94C1] hover:text-[#fff]  duration-300">About Us</a>
+                <a href="{{ url_for('contact_us') }}" class="font-semibold text-[#F3729A] border-[2px] px-3 rounded-lg py-1 border-[#FFFFFF] hover:mt-[-10px] hover:bg-[#7B94C1] hover:text-[#fff]  duration-300">Contact Us</a>
+                <button class="bg-[#ECF3F9] rounded-lg text-[#F3729A] hover:mt-[-10px] duration-300 py-2 sm:px-4 px-2 font-bold">
                     Get Extension
                 </button>
             </div>
@@ -54,7 +100,7 @@
         </h1>
 
         <div class="flex items-start w-[85%]">
-            <button id="navigateButton" class="border-[#ECF3F9] hover:bg-[#ECF3F9] duration-300 text-[#7B94C1] border-[1px] rounded-lg w-[200px] py-2 px-4 font-bold">
+            <button id="navigateButton" class="border-[#ECF3F9] hover:bg-[#ECF3F9] duration-300 text-[#EC4899] border-[1px] rounded-lg w-[200px] py-2 px-4 font-bold">
                 Check your URL
             </button>
         </div>
@@ -75,42 +121,42 @@
 
 
     <div class="relative border-[2px] border-[#ECF3F9] rounded-lg hover:shadow-lg cursor-pointer hover:scale-105 duration-300 ">
-        <p class="absolute top-[-19px] font-bold text-white rounded-lg left-[20px] px-5 py-2 bg-[#7B94C1] ">Education and Awareness</p>
+        <p class="absolute top-[-19px] font-bold text-white rounded-lg left-[20px] px-5 py-2 bg-[#F3729A] ">Education and Awareness</p>
         <div class="m-[30px]">
             Educate yourself and others about phishing techniques, common phishing signs, and how to recognize suspicious emails, messages, and websites.
         </div>
     </div>
 
     <div class="relative border-[2px] border-[#ECF3F9] rounded-lg hover:shadow-lg cursor-pointer hover:scale-105 duration-300">
-        <p class="absolute top-[-19px] font-bold text-white rounded-lg left-[20px] px-5 py-2 bg-[#7B94C1] ">Verify Sender Information:</p>
+        <p class="absolute top-[-19px] font-bold text-white rounded-lg left-[20px] px-5 py-2 bg-[#F3729A] ">Verify Sender Information:</p>
         <div class="m-[30px]">
 Always verify the sender's email address and domain to ensure it matches the legitimate organization's domain.
         </div>
     </div>
 
     <div class="relative border-[2px] border-[#ECF3F9] rounded-lg hover:shadow-lg cursor-pointer hover:scale-105 duration-300">
-        <p class="absolute top-[-19px] font-bold text-white rounded-lg left-[20px] px-5 py-2 bg-[#7B94C1] ">Think Before You Click</p>
+        <p class="absolute top-[-19px] font-bold text-white rounded-lg left-[20px] px-5 py-2 bg-[#F3729A] ">Think Before You Click</p>
         <div class="m-[30px]">
 Be cautious with links in emails, especially if the email is unexpected, the URL looks suspicious, or the email conveys a sense of urgency or pressure to click.
         </div>
     </div>
 
     <div class="relative border-[2px] border-[#ECF3F9] rounded-lg hover:shadow-lg cursor-pointer hover:scale-105 duration-300">
-        <p class="absolute top-[-19px] font-bold text-white rounded-lg left-[20px] px-5 py-2 bg-[#7B94C1] ">Check for Generic Greetings:</p>
+        <p class="absolute top-[-19px] font-bold text-white rounded-lg left-[20px] px-5 py-2 bg-[#F3729A] ">Check for Generic Greetings:</p>
         <div class="m-[30px]">
  Be suspicious of emails that use generic greetings (e.g., "Dear Customer") instead of your name or specific details.
         </div>
     </div>
 
     <div class="relative border-[2px] border-[#ECF3F9] rounded-lg hover:shadow-lg cursor-pointer hover:scale-105 duration-300">
-        <p class="absolute top-[-19px] font-bold text-white rounded-lg left-[20px] px-5 py-2 bg-[#7B94C1] ">Use Multi-Factor Authentication:</p>
+        <p class="absolute top-[-19px] font-bold text-white rounded-lg left-[20px] px-5 py-2 bg-[#F3729A] ">Use Multi-Factor Authentication:</p>
         <div class="m-[30px]">
  Enable MFA wherever possible to add an extra layer of security when accessing accounts or platforms.
         </div>
     </div>
 
     <div class="relative border-[2px] border-[#ECF3F9] rounded-lg hover:shadow-lg cursor-pointer hover:scale-105 duration-300">
-        <p class="absolute top-[-19px] font-bold text-white rounded-lg left-[20px] px-5 py-2 bg-[#7B94C1] ">Avoid Sharing Personal Info:</p>
+        <p class="absolute top-[-19px] font-bold text-white rounded-lg left-[20px] px-5 py-2 bg-[#F3729A] ">Avoid Sharing Personal Info:</p>
         <div class="m-[30px]">
 Refrain from sharing sensitive information like passwords, credit card numbers, or social security numbers via email or on unsecured websites.
         </div>
