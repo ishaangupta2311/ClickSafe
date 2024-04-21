@@ -103,3 +103,108 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Analysis Result</title>
+    <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/7f89a67ac3.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+    <style>
+        body{
+            background-color: #171717;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+          }
+    </style>
+</head>
+<body>
+    <style>
+    </style>
+    <div class="flex h-[80px] items-center justify-between sm:px-4 px-3 py-3">
+        <div class="flex items-center sm:gap-[10px] gap-[5px] cursor-pointer ">
+            <div>
+                <img class="w-[50px] h-[50px]" src="../static/logo-transparent.png" alt="logo image"/>
+            </div>
+            <a href="{{ url_for('index') }}" h1 class="font-bold tracking-[3px] uppercase md:text-3xl sm:text-2xl text-[1.15rem] heading_name " style="color: white;">ClickSafe</h1>
+        </div>
+        <div class="hidden md:block">
+            <div class="flex items-center gap-[10px]">
+                <a href="{{ url_for('about_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">About Us</a>
+                <a href="{{ url_for('contact_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">Contact Us</a>
+                <button class="bg-pink-100 rounded-lg text-pink-500 hover:mt-[-10px] duration-300 py-2 sm:px-4 px-2 font-bold">
+                    Get Extension
+                </button>
+            </div>
+        </div>
+        <div class="block md:hidden">
+            <i class="fas fa-bars nav_icon_mark text-[1.5rem]"></i>
+        </div>
+        <div class="mobile_nav hidden flex-col w-[50%] bg-white z-10 pt-[100px] absolute right-0 top-0 h-[90vh] pr-[15px] border-[2px]  items-center gap-[10px]">
+            <i class="fas fa-times cross_mark absolute right-5 top-5 text-[1.5rem]"></i>
+            <a href="{{ url_for('about_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">About Us</a>
+                <a href="{{ url_for('contact_us') }}" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:mt-[-10px] hover:bg-pink-500 hover:text-[#fff]  duration-300">Contact Us</a>
+                <button class="bg-pink-100 rounded-lg text-pink-500 hover:mt-[-10px] duration-300 py-2 sm:px-4 px-2 font-bold">
+                Get Extension
+            </button>
+        </div>
+    </div>
+
+    <!-- Content part -->
+    <div class="grid grid-cols-1 place-items-center mt-[40px] sm:mt-0 sm:grid-cols-2 items-center px-[30px]" style="color: white;">
+
+        <div class="flex flex-col gap-[30px] justify-center items-center">
+            {% if result == -1 %}
+            <h1 class="text-[1.25rem] sm:w-[85%] w-[95%] font-semibold">
+                <span class="text-[1.5rem] tracking-wider font-bold">Warning:</span> The website may be phishing due to the following reason(s):
+            </h1>
+            <ul>
+                {% for reason in reasons %}
+                <li class="border-[2px] border-[#F3729A] rounded-lg py-1 px-3 my-2">{{ reason }}</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+
+            <h1 class="text-[1.25rem]  w-[100%] border-[2px] border-[#F3729A] rounded-lg py-1 px-3 my-2">
+
+                This website is safe to use.
+            </h1>
+            {% endif %}
+
+            <div class="flex items-start w-[85%]">
+                <button id="navigateButton" class="font-semibold text-pink-500 border-[2px] px-3 rounded-lg py-1 border-[#F3729A] hover:bg-pink-500 hover:text-[#fff]  duration-300">
+                    Check Another URL
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Part -->
+    <!-- <div class="h-[100px] bg-black text-white absolute right-0 left-0 bottom-0 font-bold flex justify-center items-center">
+        &copy; 2023 Tech Fusion | All rights reserved.
+    </div> -->
+
+    <script>
+        const mobile_nav = document.querySelector('.mobile_nav'); // Select the mobile navigation menu
+    const nav_icon_mark = document.querySelector('.fa-bars'); // Select the navigation icon (fa-bars)
+    const cross_mark = document.querySelector('.cross_mark'); // Select the cross icon (fa-xmark)
+
+    nav_icon_mark.addEventListener('click', () => {
+        mobile_nav.style.display = "flex";
+    });
+
+    cross_mark.addEventListener('click', () => {
+        mobile_nav.style.display = "none";
+        console.log("again_clicked");
+    });
+        document.getElementById("navigateButton").addEventListener("click", function() {
+            window.location.href = "{{ url_for('index') }}";
+        });
+    </script>
+</body>
+</html>
