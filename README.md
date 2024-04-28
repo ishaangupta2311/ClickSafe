@@ -34,7 +34,7 @@ Follow these steps to run the **ClickSafe** project:
 2. Navigate to the project directory:
 
    ```bash
-   cd not-so-phishy
+   cd ClickSafe
    ```
 
 3. Create a virtual environment (optional but recommended):
