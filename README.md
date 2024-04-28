@@ -28,7 +28,7 @@ Follow these steps to run the **ClickSafe** project:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/akshubawa/NotSoPhishy.git
+   git clone https://github.com/ishaangupta2311/ClickSafe
    ```
 
 2. Navigate to the project directory:
